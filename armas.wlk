@@ -1,7 +1,35 @@
 object ballesta{
-  //ToDo
+  var estaCargada = false
+  
+  method estaCargada() {
+    return estaCargada
+  }
+
+  method potenciaDeAtaque(){
+    return 0
+  }
+
+  method registrarUso(){
+    estaCargada = false
+  }
+
+  method recargar(){
+    estaCargada = true
+  }
 }
 
 object jabalina{
-  //ToDo
+  var estaCargada = true
+  
+  method estaCargada() {
+    return estaCargada
+  }
+
+method registrarUso(){
+    estaCargada = false
+  }
+
+  method potenciaDeAtaque(){
+    return 0
+  }
 }

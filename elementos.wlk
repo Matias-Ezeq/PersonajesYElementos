@@ -6,6 +6,10 @@ object castillo {
   method nivelDeDefensa(){
     return nivelDeDefensa
   }
+
+  method recibirAtaque(potencia){
+    nivelDeDefensa = 0.max(nivelDeDefensa - potencia)
+  }
 }
 
 object aurora {
@@ -18,8 +22,10 @@ object aurora {
     return estaViva
   }
 
-  method morir(){
-    estaViva = false
+  method recibirAtaque(potencia){
+    if (potencia >= 10) {
+      estaViva = false
+    }
   }
 }
 
@@ -30,5 +36,9 @@ object tipa {
   }
   method crecer(nuevaAltura){
     altura = altura + 1
+  }
+
+  method recibirAtaque(potencia){
+    //No Pasa Nada
   }
 }
