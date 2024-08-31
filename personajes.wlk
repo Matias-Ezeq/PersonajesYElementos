@@ -2,30 +2,30 @@ import elementos.*
 import armas.*
 
 object floki {
-  var arma = ballesta
-  method tipoDePersonaje() = "guerrero"
+    var arma = ballesta
+    method tipoDePersonaje() = "guerrero"
   
-  method arma() {
+method arma() {
     return arma
-  }
+}
 
-  method arma(unArma) {
+method arma(unArma) {
     arma = unArma
-  }
+}
 
-  method encontrar(elemeto){
-    if(arma.estaCargada()){
-      elemento.recibirAtaque(arma.potenciaDeAtaque())
-      arma.registrarUso()
+    method encontrar(elemeto){
+        if(arma.estaCargada()){
+            elemento.recibirAtaque(arma.potenciaDeAtaque())
+            arma.registrarUso()
+        }
     }
-  }
 }
 
 object mario {
-  method tipoDePersonaje() = "trabajador"
+    method tipoDePersonaje() = "trabajador"
 
-  method encontrar(elemeto){
-    //ToDo
-  }
+    method encontrar(elemeto){
+        //ToDo
+    }
 }
 
