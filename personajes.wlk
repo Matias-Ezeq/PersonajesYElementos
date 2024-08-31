@@ -13,7 +13,7 @@ method arma(unArma) {
     arma = unArma
 }
 
-    method encontrar(elemeto){
+    method encontrar(elemento){
         if(arma.estaCargada()){
             elemento.recibirAtaque(arma.potenciaDeAtaque())
             arma.registrarUso()
