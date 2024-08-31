@@ -22,10 +22,18 @@ method arma(unArma) {
 }
 
 object mario {
+    var valorRecolectado = 0
+    var ultimoElemento = aurora
     method tipoDePersonaje() = "trabajador"
 
-    method encontrar(elemeto){
-        //ToDo
+    method encontrar(elemento){
+        valorRecolectado = valorRecolectado + elemento.otorgarValor()
+        elemento.recibirTrabajo()
+        ultimoElemento = elemento
+    }
+
+    method esFeliz(){
+        return valorRecolectado >= 50 or ultimoElemento.altura() > 10
     }
 }
 

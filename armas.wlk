@@ -1,20 +1,16 @@
 object ballesta{
-    var estaCargada = false
+    var flechas = 10
   
     method estaCargada() {
-        return estaCargada
+        return flechas > 0
     }
 
     method potenciaDeAtaque(){
-        return 0
+        return 4
     }
 
     method registrarUso(){
-        estaCargada = false
-    }
-
-    method recargar(){
-        estaCargada = true
+        flechas = 0.max(flechas - 1)
     }
 }
 
@@ -30,6 +26,6 @@ object jabalina{
     }
 
     method potenciaDeAtaque(){
-        return 0
+        return 30
     }
 }
